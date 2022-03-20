@@ -24,4 +24,6 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 ![screenshot1](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/03-javascript-homework-demo.png)
-![screenshot2]()
+![screenshot2](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181709.jpg)
+![screenshot3](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181744.jpg)
+![screenshot4](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181825.jpg)
