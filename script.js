@@ -60,18 +60,18 @@ function getPasswordLength() {
   return choice;
 }
 
-// function to represent the prompt portion of readme. asks user to enter a "y" or "n" to select which character options they want in password
+// function to represent the prompt portion of readme. asks user to enter a "yes" or "no" to select which character options they want in password
 function getChoice(Option) {
   var choice = "a",
     Prompt = "";
-  var Prompt = ('Would you like '.concat(Option));
-  Prompt = Prompt.concat(' characters (y/n)?');
+  var Prompt = ("Include  ".concat(Option));
+  Prompt = Prompt.concat(' characters (yes/no)?');
   // This loop ensures the user enters a valid response. resets if not valid
   while (choice = "a") {
     choice = (prompt(Prompt));
-    if (choice == "y") {
+    if (choice == "yes") {
       return true;
-    } else if (choice == "n") {
+    } else if (choice == "no") {
       return false;
     }
   }
