@@ -25,7 +25,10 @@ THEN the password is either displayed in an alert or written to the page
 ```
 HOW to use webpage 
 1 click generate password
-2 enter "y" or "n"
+2 enter number of characters between 8 and 128 in prompt window
+3 enter "yes" or "no" to include uppercase, lowecase, numbers, and symbols in prompt window
+4 recieve generated password that fits your selected criteria
+
 ![screenshot1](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/03-javascript-homework-demo.png)
 ![screenshot2](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181709.jpg)
 ![screenshot3](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181744.jpg)

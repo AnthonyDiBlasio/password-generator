@@ -1,16 +1,16 @@
 // Assignment Code
 function generatePassword() {
   // Created arrays matching criteria for password (lowercase,uppercase,numbers,symbols)to add to an open array to generate password.
+  var symbolSet = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
+  var numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  var numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  var symbolSet = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
   var passwordArray = [];
   var passwordLength = getPasswordLength();
 
   var charType = false;
-  // I created a while loop to repeat this loop ensuring the user submits the correct criteria.
-  while (charType == false) {
+  // I created a loop to repeat this loop ensuring the user submits the character types.
+  if (charType == false) {
     var lowerCase = getChoice("lowercase");
     var upperCase = getChoice("uppercase");
     var num = getChoice("number");
@@ -53,7 +53,7 @@ function getPasswordLength() {
     // if statement to see if user inputs a number
     if (isNaN(choice)) {
       // number set to 0 to reset the loop if number is not inputed.
-      choice = 0;
+     choice = 0;
     }
   }
 
@@ -87,19 +87,5 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
