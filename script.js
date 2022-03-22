@@ -1,4 +1,16 @@
-// Assignment Code
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+//add function generatePassword 
 function generatePassword() {
   // Created arrays matching criteria for password (lowercase,uppercase,numbers,symbols)to add to an open array to generate password.
   var symbolSet = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
@@ -8,19 +20,37 @@ function generatePassword() {
   var passwordArray = [];
   var passwordLength = getPasswordLength();
 
-  var charType = false;
+  var charType = true;
   // I created a loop to repeat this loop ensuring the user submits the character types.
-  if (charType == false) {
-    var lowerCase = getChoice("lowercase");
-    var upperCase = getChoice("uppercase");
-    var num = getChoice("number");
-    var specialC = getChoice("symbol");
+  if (charType == true) {
+    var lowerCase = postMessage("lowercase");
+    var upperCase = postMessage("uppercase");
+    var num = postMessage("number");
+    var specialC = postMessage("symbol");
     if ((lowerCase) || (upperCase) || (num) || (specialC)) {
-      charType = true;
+      charType = false;
     } else {
       alert("You must select at least one character type.")
+      //if false this ensure the entire generate password function resets
+      return generatePassword();
     }
   }
+  // function to represent the prompt portion of readme. asks user to enter a "yes" or "no" to select which character options they want in password
+function postMessage(option) {
+  var choice = "abc",
+    Prompt = "";
+  var Prompt = ("Include  ".concat(option));
+  Prompt = Prompt.concat(' characters (yes/no)?');
+  // This loop ensures the user enters a valid response. resets if not valid
+  while (choice = "abc") {
+    choice = (prompt(Prompt));
+    if (choice == "yes") {
+      return true;
+    } else if (choice == "no") {
+      return false;
+    }
+  }
+}
 
   // These if statements determine the user choices and then append them to the blank array I created.
   if (lowerCase) {
@@ -56,36 +86,5 @@ function getPasswordLength() {
      choice = 0;
     }
   }
-
   return choice;
 }
-
-// function to represent the prompt portion of readme. asks user to enter a "yes" or "no" to select which character options they want in password
-function getChoice(Option) {
-  var choice = "a",
-    Prompt = "";
-  var Prompt = ("Include  ".concat(Option));
-  Prompt = Prompt.concat(' characters (yes/no)?');
-  // This loop ensures the user enters a valid response. resets if not valid
-  while (choice = "a") {
-    choice = (prompt(Prompt));
-    if (choice == "yes") {
-      return true;
-    } else if (choice == "no") {
-      return false;
-    }
-  }
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
