@@ -18,11 +18,11 @@ function generatePassword() {
   var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var passwordArray = [];
-  var passwordLength = getPasswordLength();
+  var passwordLength = passwordLengthget();
 
   var charType = true;
   // I created a loop to repeat this loop ensuring the user submits the character types.
-  if (charType == true) {
+  while (charType == true) {
     var lowerCase = postMessage("lowercase");
     var upperCase = postMessage("uppercase");
     var num = postMessage("number");
@@ -32,9 +32,8 @@ function generatePassword() {
     } else {
       alert("You must select at least one character type.")
       //if false this ensure the entire generate password function resets
-      return generatePassword();
-    }
-  }
+  } 
+}
   // function to represent the prompt portion of readme. asks user to enter a "yes" or "no" to select which character options they want in password
 function postMessage(option) {
   var choice = "abc",
@@ -43,13 +42,13 @@ function postMessage(option) {
   Prompt = Prompt.concat(' characters (yes/no)?');
   // This loop ensures the user enters a valid response. resets if not valid
   while (choice = "abc") {
-    choice = (prompt(Prompt));
+   choice = (prompt(Prompt));
     if (choice == "yes") {
       return true;
     } else if (choice == "no") {
       return false;
     }
-  }
+  } 
 }
 
   // These if statements determine the user choices and then append them to the blank array I created.
@@ -75,7 +74,7 @@ function postMessage(option) {
   return passString;
 }
 // this function generates the password length using a while loop and an "or" statement
-function getPasswordLength() {
+function passwordLengthget() {
   var choice = 0;
   while ((choice < 8) || (choice > 128)) {
     choice = parseInt(prompt("Enter the number for length of password between 8 and 128: "));
