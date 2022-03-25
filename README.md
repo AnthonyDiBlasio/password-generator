@@ -29,7 +29,7 @@ HOW to use webpage
 3 enter "yes" or "no" to include uppercase, lowecase, numbers, and symbols in prompt window
 4 recieve generated password that fits your selected criteria
 
-![screenshot1](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/03-javascript-homework-demo.png)
-![screenshot2](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181709.jpg)
-![screenshot3](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181744.jpg)
-![screenshot4](https://raw.githubusercontent.com/AnthonyDiBlasio/password-generator/main/assets/Screenshot%202022-03-20%20181825.jpg)
+![screenshot1]()
+![screenshot2]()
+![screenshot3]()
+![screenshot4]()
